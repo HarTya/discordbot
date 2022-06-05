@@ -2,8 +2,11 @@
   "private": true,
   "scripts": {
     "dev": "nodemon src/index.js",
-    "build": "node src/index.js",
-    "start": "node src/index.js"
+    "prod": "node src/index.js",
+    "stop": "pm2 stop src/index.js",
+    "start": "pm2 start src/index.js",
+    "restart": "pm2 restart src/index.js",
+    "status": "pm2 status"
   },
   "dependencies": {
     "@discordjs/rest": "^0.4.1",

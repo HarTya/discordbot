@@ -56,9 +56,9 @@ const time = [
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
 
-  ///////////////////// ВТОРНИК /////////////////////
-
   setInterval(() => {
+    ///////////////////// ВТОРНИК /////////////////////
+
     if (`${new Date().getHours()}:${new Date().getMinutes()}` === time[0] && new Date().getUTCDay() === 2) {
       client.channels.fetch(process.env.CHANNEL)
         .then(channel => {
@@ -107,11 +107,9 @@ client.on('ready', () => {
           channel.send(`@everyone ${db.tuesday[7]}`);
         })
     }
-  }, 5000);
 
-  ///////////////////// СРЕДА /////////////////////
+    ///////////////////// СРЕДА /////////////////////
 
-  setInterval(() => {
     if (`${new Date().getHours()}:${new Date().getMinutes()}` === time[0] && new Date().getUTCDay() === 3) {
       client.channels.fetch(process.env.CHANNEL)
         .then(channel => {
@@ -167,11 +165,9 @@ client.on('ready', () => {
           channel.send(`@everyone ${db.wednesday[8]}`);
         })
     }
-  }, 5000);
 
-  ///////////////////// ЧЕТВЕРГ /////////////////////
+    ///////////////////// ЧЕТВЕРГ /////////////////////
 
-  setInterval(() => {
     if (`${new Date().getHours()}:${new Date().getMinutes()}` === time[0] && new Date().getUTCDay() === 4) {
       client.channels.fetch(process.env.CHANNEL)
         .then(channel => {
@@ -220,11 +216,9 @@ client.on('ready', () => {
           channel.send(`@everyone ${db.thursday[7]}`);
         })
     }
-  }, 5000);
 
-  ///////////////////// ПЯТНИЦА /////////////////////
+    ///////////////////// ПЯТНИЦА /////////////////////
 
-  setInterval(() => {
     if (`${new Date().getHours()}:${new Date().getMinutes()}` === time[0] && new Date().getUTCDay() === 5) {
       client.channels.fetch(process.env.CHANNEL)
         .then(channel => {
@@ -273,11 +267,9 @@ client.on('ready', () => {
           channel.send(`@everyone ${db.friday[7]}`);
         })
     }
-  }, 5000);
 
-  ///////////////////// СУББОТА /////////////////////
+    ///////////////////// СУББОТА /////////////////////
 
-  setInterval(() => {
     if (`${new Date().getHours()}:${new Date().getMinutes()}` === time[0] && new Date().getUTCDay() === 6) {
       client.channels.fetch(process.env.CHANNEL)
         .then(channel => {
@@ -330,16 +322,42 @@ client.on('ready', () => {
 })
 
 client.on('messageCreate', message => {
-  if (message.content.toLocaleLowerCase() === 'бля') {
-    message.reply('Общайся без мата, дуралей');
+  if (message.content.toLocaleLowerCase().includes('бля') === true || message.content.toLocaleLowerCase().includes('сука') === true || message.content.toLocaleLowerCase().includes('пиздец') === true || message.content.toLocaleLowerCase().includes('нахуй') === true || message.content.toLocaleLowerCase().includes('пизда') === true || message.content.toLocaleLowerCase().includes('уебан') === true || message.content.toLocaleLowerCase().includes('ебать') === true || message.content.toLocaleLowerCase().includes('хуй') === true) {
+    if (message.author.tag === 'Робот Долбоёб#9882') {
+      return
+    }
+    if (message.author.tag === 'XarTya#9355') {
+      return message.reply(`Тебе можно, пупсик`);
+    }
+    message.reply(`Общайся без мата, ${message.author.tag}, или выебу своим 50+ бит железным хуем`);
   }
 
-  if (message.content.toLocaleLowerCase() === 'я робот долбоёб') {
+  if (message.content.toLocaleLowerCase().includes('артя') === true || message.content.toLocaleLowerCase().includes('artya') === true) {
+    if (message.author.tag === 'Робот Долбоёб#9882') {
+      return
+    }
+    message.reply('Фу такой хуёвый код пишет это пиздец а ой');
+  }
+
+  if (message.content.toLocaleLowerCase().includes('https://') === true) {
+    if (message.author.tag === 'Робот Долбоёб#9882') {
+      return
+    }
+    message.reply('Неинтересная хуйня лучше зайди сюда https://github.com/HarTya');
+  }
+
+  if (message.content.toLocaleLowerCase().includes('я робот') === true) {
+    if (message.author.tag === 'Робот Долбоёб#9882') {
+      return
+    }
     message.reply('Я должен танцевать');
   }
 
-  if (message.content.toLocaleLowerCase() === 'you are not bambino') {
-    message.reply('chao bambino');
+  if (message.content.toLocaleLowerCase().includes('bambino') === true) {
+    if (message.author.tag === 'Робот Долбоёб#9882') {
+      return
+    }
+    message.reply('I understand but пошел нахуй черномазый');
   }
 })
 
