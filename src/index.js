@@ -1,6 +1,7 @@
 require('dotenv').config();
 
 const { REST } = require('@discordjs/rest');
+const { default: axios } = require('axios');
 const { Routes } = require('discord-api-types/v9');
 
 const commands = [
@@ -56,54 +57,58 @@ const time = [
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
 
-  setInterval(() => {
-    console.log(`${new Date().getHours()}:${new Date().getMinutes()}`)
+  setInterval(async () => {
+
+    const response = await axios.get('https://timeapi.io/api/Time/current/zone?timeZone=Europe/Kiev');
+
+    const dataHour = response.data.hour;
+    const dataMinute = response.data.minute;
 
     ///////////////////// ВТОРНИК /////////////////////
 
-    if (`${new Date().getHours()}:${new Date().getMinutes()}` === time[0] && new Date().getUTCDay() === 2) {
+    if (`${dataHour}:${dataMinute}` === time[0] && new Date().getUTCDay() === 2) {
       client.channels.fetch(process.env.CHANNEL)
         .then(channel => {
           channel.send(`@everyone ${db.tuesday[1]}`);
         })
     }
 
-    if (`${new Date().getHours()}:${new Date().getMinutes()}` === time[1] && new Date().getUTCDay() === 2) {
+    if (`${dataHour}:${dataMinute}` === time[1] && new Date().getUTCDay() === 2) {
       client.channels.fetch(process.env.CHANNEL)
         .then(channel => {
           channel.send(`@everyone ${db.tuesday[2]}`);
         })
     }
 
-    if (`${new Date().getHours()}:${new Date().getMinutes()}` === time[2] && new Date().getUTCDay() === 2) {
+    if (`${dataHour}:${dataMinute}` === time[2] && new Date().getUTCDay() === 2) {
       client.channels.fetch(process.env.CHANNEL)
         .then(channel => {
           channel.send(`@everyone ${db.tuesday[3]}`);
         })
     }
 
-    if (`${new Date().getHours()}:${new Date().getMinutes()}` === time[3] && new Date().getUTCDay() === 2) {
+    if (`${dataHour}:${dataMinute}` === time[3] && new Date().getUTCDay() === 2) {
       client.channels.fetch(process.env.CHANNEL)
         .then(channel => {
           channel.send(`@everyone ${db.tuesday[4]}`);
         })
     }
 
-    if (`${new Date().getHours()}:${new Date().getMinutes()}` === time[4] && new Date().getUTCDay() === 2) {
+    if (`${dataHour}:${dataMinute}` === time[4] && new Date().getUTCDay() === 2) {
       client.channels.fetch(process.env.CHANNEL)
         .then(channel => {
           channel.send(`@everyone ${db.tuesday[5]}`);
         })
     }
 
-    if (`${new Date().getHours()}:${new Date().getMinutes()}` === time[5] && new Date().getUTCDay() === 2) {
+    if (`${dataHour}:${dataMinute}` === time[5] && new Date().getUTCDay() === 2) {
       client.channels.fetch(process.env.CHANNEL)
         .then(channel => {
           channel.send(`@everyone ${db.tuesday[6]}`);
         })
     }
 
-    if (`${new Date().getHours()}:${new Date().getMinutes()}` === time[6] && new Date().getUTCDay() === 2) {
+    if (`${dataHour}:${dataMinute}` === time[6] && new Date().getUTCDay() === 2) {
       client.channels.fetch(process.env.CHANNEL)
         .then(channel => {
           channel.send(`@everyone ${db.tuesday[7]}`);
@@ -320,7 +325,7 @@ client.on('ready', () => {
           channel.send(`@everyone ${db.saturday[7]}`);
         })
     }
-  }, 30000);
+  }, 15000);
 })
 
 client.on('messageCreate', message => {
