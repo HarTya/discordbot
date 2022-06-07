@@ -108,22 +108,64 @@
     },
     "friday": {
         "day": "ПЯТНИЦА",
-        "1": "Всемирная История",
-        "2": "География",
-        "3": "Украинская литература",
-        "4": "Информатика/Геометрия https://us04web.zoom.us/j/79727219082?pwd=QXQ0iV04C2LpB3zo5FrzLCMRtHSV30.1",
-        "5": "Информатика/Геометрия https://us04web.zoom.us/j/79727219082?pwd=QXQ0iV04C2LpB3zo5FrzLCMRtHSV30.1",
-        "6": "Информатика/Геометрия https://us04web.zoom.us/j/79727219082?pwd=QXQ0iV04C2LpB3zo5FrzLCMRtHSV30.1",
-        "7": "Информатика/Геометрия https://us04web.zoom.us/j/79727219082?pwd=QXQ0iV04C2LpB3zo5FrzLCMRtHSV30.1"
+        "1": {
+            "name": "Всемирная История",
+            "conf": ""
+        },
+        "2": {
+            "name": "География",
+            "conf": ""
+        },
+        "3": {
+            "name": "Украинская литература",
+            "conf": ""
+        },
+        "4": {
+            "name": "Информатика/Геометрия",
+            "conf": "https://us04web.zoom.us/j/79727219082?pwd=QXQ0iV04C2LpB3zo5FrzLCMRtHSV30.1"
+        },
+        "5": {
+            "name": "Информатика/Геометрия",
+            "conf": "https://us04web.zoom.us/j/79727219082?pwd=QXQ0iV04C2LpB3zo5FrzLCMRtHSV30.1"
+        },
+        "6": {
+            "name": "Информатика/Геометрия",
+            "conf": "https://us04web.zoom.us/j/79727219082?pwd=QXQ0iV04C2LpB3zo5FrzLCMRtHSV30.1"
+        },
+        "7": {
+            "name": "Информатика/Геометрия",
+            "conf": "https://us04web.zoom.us/j/79727219082?pwd=QXQ0iV04C2LpB3zo5FrzLCMRtHSV30.1"
+        }
     },
     "saturday": {
         "day": "СУББОТА",
-        "1": "Физика/Алгебра https://us04web.zoom.us/j/79727219082?pwd=QXQ0iV04C2LpB3zo5FrzLCMRtHSV30.1",
-        "2": "Физика/Алгебра https://us04web.zoom.us/j/79727219082?pwd=QXQ0iV04C2LpB3zo5FrzLCMRtHSV30.1",
-        "3": "Физика/Алгебра https://us04web.zoom.us/j/79727219082?pwd=QXQ0iV04C2LpB3zo5FrzLCMRtHSV30.1",
-        "4": "Физика/Алгебра https://us04web.zoom.us/j/79727219082?pwd=QXQ0iV04C2LpB3zo5FrzLCMRtHSV30.1",
-        "5": "Английский язык",
-        "6": "Химия",
-        "7": "Украинский язык"
+        "1": {
+            "name": "Физика/Алгебра",
+            "conf": "https://us04web.zoom.us/j/79727219082?pwd=QXQ0iV04C2LpB3zo5FrzLCMRtHSV30.1"
+        },
+        "2": {
+            "name": "Физика/Алгебра",
+            "conf": "https://us04web.zoom.us/j/79727219082?pwd=QXQ0iV04C2LpB3zo5FrzLCMRtHSV30.1"
+        },
+        "3": {
+            "name": "Физика/Алгебра",
+            "conf": "https://us04web.zoom.us/j/79727219082?pwd=QXQ0iV04C2LpB3zo5FrzLCMRtHSV30.1"
+        },
+        "4": {
+            "name": "Физика/Алгебра",
+            "conf": "https://us04web.zoom.us/j/79727219082?pwd=QXQ0iV04C2LpB3zo5FrzLCMRtHSV30.1"
+        },
+        "5": {
+            "name": "Английский язык",
+            "conf": ""
+        },
+        "6": {
+            "name": "Химия",
+            "conf": ""
+        },
+        "7": {
+            "name": "Украинский язык",
+            "conf": ""
+        }
     }
 }
