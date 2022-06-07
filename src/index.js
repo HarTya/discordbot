@@ -57,6 +57,8 @@ client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
 
   setInterval(() => {
+    console.log(`${new Date().getHours()}:${new Date().getMinutes()}`)
+
     ///////////////////// ВТОРНИК /////////////////////
 
     if (`${new Date().getHours()}:${new Date().getMinutes()}` === time[0] && new Date().getUTCDay() === 2) {
@@ -318,7 +320,7 @@ client.on('ready', () => {
           channel.send(`@everyone ${db.saturday[7]}`);
         })
     }
-  }, 10000);
+  }, 30000);
 })
 
 client.on('messageCreate', message => {
