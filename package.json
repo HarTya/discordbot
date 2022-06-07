@@ -2,7 +2,7 @@
   "private": true,
   "scripts": {
     "dev": "nodemon src/index.js",
-    "start": "node src/index.js"
+    "worker": "node src/index.js"
   },
   "dependencies": {
     "@discordjs/rest": "^0.4.1",
