@@ -57,6 +57,8 @@ client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
 
   setInterval(() => {
+    console.log('a')
+
     ///////////////////// ВТОРНИК /////////////////////
 
     if (`${new Date().getHours()}:${new Date().getMinutes()}` === time[0] && new Date().getUTCDay() === 2) {
