@@ -334,7 +334,7 @@ client.on('messageCreate', message => {
     if (message.author.tag === 'XarTya#9355') {
       return message.reply(`Тебе можно, пупсик`);
     }
-    message.reply(`Общайся без мата, ${message.author.tag}, или выебу своим 50+ бит железным хуем`);
+    message.reply(`Общайся без мата, ${message.author}, или выебу своим 50+ бит железным хуем`);
   }
 
   if (message.content.toLocaleLowerCase().includes('артя') === true || message.content.toLocaleLowerCase().includes('artya') === true) {
