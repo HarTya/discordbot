@@ -318,7 +318,7 @@ client.on('ready', () => {
           channel.send(`@everyone ${db.saturday[7]}`);
         })
     }
-  }, 5000);
+  }, 10000);
 })
 
 client.on('messageCreate', message => {
