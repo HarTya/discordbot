@@ -60,8 +60,6 @@ client.on('ready', () => {
   setInterval(async () => {
     const response = await axios.get('https://timeapi.io/api/Time/current/zone?timeZone=Europe/Kiev');
 
-    time.forEach(t => console.log(typeof t))
-
     console.log(response.data.time);
 
     ///////////////////// ВТОРНИК /////////////////////
