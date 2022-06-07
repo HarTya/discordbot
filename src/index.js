@@ -60,7 +60,7 @@ client.on('ready', () => {
   setInterval(async () => {
     const response = await axios.get('https://timeapi.io/api/Time/current/zone?timeZone=Europe/Kiev');
 
-    console.log(response);
+    console.log(`Now ${dataHour}:${dataMinute}`);
 
     const dataHour = response.data.hour;
     const dataMinute = response.data.minute;
