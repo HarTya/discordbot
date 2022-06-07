@@ -12,7 +12,7 @@ const commands = [
   {
     name: 'lessons',
     description: 'Расписание'
-  },
+  }
 ]; 
 
 const rest = new REST({ version: '9' }).setToken(process.env.TOKEN);
@@ -23,7 +23,7 @@ const rest = new REST({ version: '9' }).setToken(process.env.TOKEN);
 
     await rest.put(
       Routes.applicationGuildCommands(process.env.CLIENT, process.env.GUILD),
-      { body: commands },
+      { body: commands }
     );
 
     console.log('Successfully reloaded application (/) commands.');
@@ -37,22 +37,22 @@ const Discord = require('discord.js');
 const client = new Discord.Client({
   intents: [
     Discord.Intents.FLAGS.GUILDS, 
-    Discord.Intents.FLAGS.GUILD_MESSAGES, 
+    Discord.Intents.FLAGS.GUILD_MESSAGES
   ]
 })
 
 const db = require('./lessons.json');
 const stringDb = `
-${db.tuesday.day}\n1. ${db.tuesday[1].name}\n2. ${db.tuesday['2']}\n3. ${db.tuesday['3']}\n4. ${db.tuesday['4']}\n5. ${db.tuesday['5']}\n6. ${db.tuesday['6']}\n7. ${db.tuesday['7']}\n
-${db.wednesday.day}\n1. ${db.wednesday['1']}\n2. ${db.wednesday['2']}\n3. ${db.wednesday['3']}\n4. ${db.wednesday['4']}\n5. ${db.wednesday['5']}\n6. ${db.wednesday['6']}\n7. ${db.wednesday['7']}\n8. ${db.wednesday['8']}\n
-${db.thursday.day}\n1. ${db.thursday['1']}\n2. ${db.thursday['2']}\n3. ${db.thursday['3']}\n4. ${db.thursday['4']}\n5. ${db.thursday['5']}\n6. ${db.thursday['6']}\n7. ${db.thursday['7']}\n
-${db.friday.day}\n1. ${db.friday['1']}\n2. ${db.friday['2']}\n3. ${db.friday['3']}\n4. ${db.friday['4']}\n5. ${db.friday['5']}\n6. ${db.friday['6']}\n7. ${db.friday['7']}\n
-${db.saturday.day}\n1. ${db.saturday['1']}\n2. ${db.saturday['2']}\n3. ${db.saturday['3']}\n4. ${db.saturday['4']}\n5. ${db.saturday['5']}\n6. ${db.saturday['6']}\n7. ${db.saturday['7']}
+${db.tuesday.day}\n1. ${db.tuesday[1].name}\n2. ${db.tuesday[2].name}\n3. ${db.tuesday[3].name}\n4. ${db.tuesday[4].name}\n5. ${db.tuesday[5].name}\n6. ${db.tuesday[6].name}\n7. ${db.tuesday[7].name}\n
+${db.wednesday.day}\n1. ${db.wednesday[1].name}\n2. ${db.wednesday[2].name}\n3. ${db.wednesday[3].name}\n4. ${db.wednesday[4].name}\n5. ${db.wednesday[5].name}\n6. ${db.wednesday[6].name}\n7. ${db.wednesday[7].name}\n8. ${db.wednesday[8].name}\n
+${db.thursday.day}\n1. ${db.thursday[1].name}\n2. ${db.thursday[2].name}\n3. ${db.thursday[3].name}\n4. ${db.thursday[4].name}\n5. ${db.thursday[5].name}\n6. ${db.thursday[6].name}\n7. ${db.thursday[7].name}\n
+${db.friday.day}\n1. ${db.friday[1].name}\n2. ${db.friday[2].name}\n3. ${db.friday[3].name}\n4. ${db.friday[4].name}\n5. ${db.friday[5].name}\n6. ${db.friday[6].name}\n7. ${db.friday[7].name}\n
+${db.saturday.day}\n1. ${db.saturday[1].name}\n2. ${db.saturday[2].name}\n3. ${db.saturday[3].name}\n4. ${db.saturday[4].name}\n5. ${db.saturday[5].name}\n6. ${db.saturday[6].name}\n7. ${db.saturday[7].name}
 `;
 
 const time = [
   `${db.time[1]}`, `${db.time[2]}`, `${db.time[3]}`, `${db.time[4]}`, `${db.time[5]}`, `${db.time[6]}`, `${db.time[7]}`, `${db.time[8]}`
-]
+];
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
@@ -75,42 +75,42 @@ client.on('ready', () => {
     if (`${dataHour}:${dataMinute}` === time[1] && new Date().getUTCDay() === 2) {
       client.channels.fetch(process.env.CHANNEL)
         .then(channel => {
-          channel.send(`@everyone ${db.tuesday[2].name}`);
+          channel.send(`@everyone ${db.tuesday[2].name} ${db.tuesday[2].conf}`);
         })
     }
 
     if (`${dataHour}:${dataMinute}` === time[2] && new Date().getUTCDay() === 2) {
       client.channels.fetch(process.env.CHANNEL)
         .then(channel => {
-          channel.send(`@everyone ${db.tuesday[3].name}`);
+          channel.send(`@everyone ${db.tuesday[3].name} ${db.tuesday[3].conf}`);
         })
     }
 
     if (`${dataHour}:${dataMinute}` === time[3] && new Date().getUTCDay() === 2) {
       client.channels.fetch(process.env.CHANNEL)
         .then(channel => {
-          channel.send(`@everyone ${db.tuesday[4].name}`);
+          channel.send(`@everyone ${db.tuesday[4].name} ${db.tuesday[4].conf}`);
         })
     }
 
     if (`${dataHour}:${dataMinute}` === time[4] && new Date().getUTCDay() === 2) {
       client.channels.fetch(process.env.CHANNEL)
         .then(channel => {
-          channel.send(`@everyone ${db.tuesday[5].name}`);
+          channel.send(`@everyone ${db.tuesday[5].name} ${db.tuesday[5].conf}`);
         })
     }
 
     if (`${dataHour}:${dataMinute}` === time[5] && new Date().getUTCDay() === 2) {
       client.channels.fetch(process.env.CHANNEL)
         .then(channel => {
-          channel.send(`@everyone ${db.tuesday[6].name}`);
+          channel.send(`@everyone ${db.tuesday[6].name} ${db.tuesday[6].conf}`);
         })
     }
 
     if (`${dataHour}:${dataMinute}` === time[6] && new Date().getUTCDay() === 2) {
       client.channels.fetch(process.env.CHANNEL)
         .then(channel => {
-          channel.send(`@everyone ${db.tuesday[7].name}`);
+          channel.send(`@everyone ${db.tuesday[7].name} ${db.tuesday[7].conf}`);
         })
     }
 
@@ -119,56 +119,56 @@ client.on('ready', () => {
     if (`${dataHour}:${dataMinute}` === time[0] && new Date().getUTCDay() === 3) {
       client.channels.fetch(process.env.CHANNEL)
         .then(channel => {
-          channel.send(`@everyone ${db.wednesday[1]}`);
+          channel.send(`@everyone ${db.wednesday[1].name} ${db.wednesday[1].conf}`);
         })
     }
 
     if (`${dataHour}:${dataMinute}` === time[1] && new Date().getUTCDay() === 3) {
       client.channels.fetch(process.env.CHANNEL)
         .then(channel => {
-          channel.send(`@everyone ${db.wednesday[2]}`);
+          channel.send(`@everyone ${db.wednesday[2].name} ${db.wednesday[2].conf}`);
         })
     }
 
     if (`${dataHour}:${dataMinute}` === time[2] && new Date().getUTCDay() === 3) {
       client.channels.fetch(process.env.CHANNEL)
         .then(channel => {
-          channel.send(`@everyone ${db.wednesday[3]}`);
+          channel.send(`@everyone ${db.wednesday[3].name} ${db.wednesday[3].conf}`);
         })
     }
 
     if (`${dataHour}:${dataMinute}` === time[3] && new Date().getUTCDay() === 3) {
       client.channels.fetch(process.env.CHANNEL)
         .then(channel => {
-          channel.send(`@everyone ${db.wednesday[4]}`);
+          channel.send(`@everyone ${db.wednesday[4].name} ${db.wednesday[4].conf}`);
         })
     }
 
     if (`${dataHour}:${dataMinute}` === time[4] && new Date().getUTCDay() === 3) {
       client.channels.fetch(process.env.CHANNEL)
         .then(channel => {
-          channel.send(`@everyone ${db.wednesday[5]}`);
+          channel.send(`@everyone ${db.wednesday[5].name} ${db.wednesday[5].conf}`);
         })
     }
 
     if (`${dataHour}:${dataMinute}` === time[5] && new Date().getUTCDay() === 3) {
       client.channels.fetch(process.env.CHANNEL)
         .then(channel => {
-          channel.send(`@everyone ${db.wednesday[6]}`);
+          channel.send(`@everyone ${db.wednesday[6].name} ${db.wednesday[6].conf}`);
         })
     }
 
     if (`${dataHour}:${dataMinute}` === time[6] && new Date().getUTCDay() === 3) {
       client.channels.fetch(process.env.CHANNEL)
         .then(channel => {
-          channel.send(`@everyone ${db.wednesday[7]}`);
+          channel.send(`@everyone ${db.wednesday[7].name} ${db.wednesday[7].conf}`);
         })
     }
 
     if (`${dataHour}:${dataMinute}` === time[6] && new Date().getUTCDay() === 3) {
       client.channels.fetch(process.env.CHANNEL)
         .then(channel => {
-          channel.send(`@everyone ${db.wednesday[8]}`);
+          channel.send(`@everyone ${db.wednesday[8].name} ${db.wednesday[8].conf}`);
         })
     }
 
@@ -177,49 +177,49 @@ client.on('ready', () => {
     if (`${dataHour}:${dataMinute}` === time[0] && new Date().getUTCDay() === 4) {
       client.channels.fetch(process.env.CHANNEL)
         .then(channel => {
-          channel.send(`@everyone ${db.thursday[1]}`);
+          channel.send(`@everyone ${db.thursday[1].name} ${db.thursday[1].conf}`);
         })
     }
 
     if (`${dataHour}:${dataMinute}` === time[1] && new Date().getUTCDay() === 4) {
       client.channels.fetch(process.env.CHANNEL)
         .then(channel => {
-          channel.send(`@everyone ${db.thursday[2]}`);
+          channel.send(`@everyone ${db.thursday[2].name} ${db.thursday[2].conf}`);
         })
     }
 
     if (`${dataHour}:${dataMinute}` === time[2] && new Date().getUTCDay() === 4) {
       client.channels.fetch(process.env.CHANNEL)
         .then(channel => {
-          channel.send(`@everyone ${db.thursday[3]}`);
+          channel.send(`@everyone ${db.thursday[3].name} ${db.thursday[3].conf}`);
         })
     }
 
     if (`${dataHour}:${dataMinute}` === time[3] && new Date().getUTCDay() === 4) {
       client.channels.fetch(process.env.CHANNEL)
         .then(channel => {
-          channel.send(`@everyone ${db.thursday[4]}`);
+          channel.send(`@everyone ${db.thursday[4].name} ${db.thursday[4].conf}`);
         })
     }
 
     if (`${dataHour}:${dataMinute}` === time[4] && new Date().getUTCDay() === 4) {
       client.channels.fetch(process.env.CHANNEL)
         .then(channel => {
-          channel.send(`@everyone ${db.thursday[5]}`);
+          channel.send(`@everyone ${db.thursday[5].name} ${db.thursday[5].conf}`);
         })
     }
 
     if (`${dataHour}:${dataMinute}` === time[5] && new Date().getUTCDay() === 4) {
       client.channels.fetch(process.env.CHANNEL)
         .then(channel => {
-          channel.send(`@everyone ${db.thursday[6]}`);
+          channel.send(`@everyone ${db.thursday[6].name} ${db.thursday[6].conf}`);
         })
     }
 
     if (`${dataHour}:${dataMinute}` === time[6] && new Date().getUTCDay() === 4) {
       client.channels.fetch(process.env.CHANNEL)
         .then(channel => {
-          channel.send(`@everyone ${db.thursday[7]}`);
+          channel.send(`@everyone ${db.thursday[7].name} ${db.thursday[7].conf}`);
         })
     }
 
@@ -228,49 +228,49 @@ client.on('ready', () => {
     if (`${dataHour}:${dataMinute}` === time[0] && new Date().getUTCDay() === 5) {
       client.channels.fetch(process.env.CHANNEL)
         .then(channel => {
-          channel.send(`@everyone ${db.friday[1]}`);
+          channel.send(`@everyone ${db.friday[1].name} ${db.friday[1].conf}`);
         })
     }
 
     if (`${dataHour}:${dataMinute}` === time[1] && new Date().getUTCDay() === 5) {
       client.channels.fetch(process.env.CHANNEL)
         .then(channel => {
-          channel.send(`@everyone ${db.friday[2]}`);
+          channel.send(`@everyone ${db.friday[2].name} ${db.friday[2].conf}`);
         })
     }
 
     if (`${dataHour}:${dataMinute}` === time[2] && new Date().getUTCDay() === 5) {
       client.channels.fetch(process.env.CHANNEL)
         .then(channel => {
-          channel.send(`@everyone ${db.friday[3]}`);
+          channel.send(`@everyone ${db.friday[3].name} ${db.friday[3].conf}`);
         })
     }
 
     if (`${dataHour}:${dataMinute}` === time[3] && new Date().getUTCDay() === 5) {
       client.channels.fetch(process.env.CHANNEL)
         .then(channel => {
-          channel.send(`@everyone ${db.friday[4]}`);
+          channel.send(`@everyone ${db.friday[4].name} ${db.friday[4].conf}`);
         })
     }
 
     if (`${dataHour}:${dataMinute}` === time[4] && new Date().getUTCDay() === 5) {
       client.channels.fetch(process.env.CHANNEL)
         .then(channel => {
-          channel.send(`@everyone ${db.friday[5]}`);
+          channel.send(`@everyone ${db.friday[5].name} ${db.friday[5].conf}`);
         })
     }
 
     if (`${dataHour}:${dataMinute}` === time[5] && new Date().getUTCDay() === 5) {
       client.channels.fetch(process.env.CHANNEL)
         .then(channel => {
-          channel.send(`@everyone ${db.friday[6]}`);
+          channel.send(`@everyone ${db.friday[6].name} ${db.friday[6].conf}`);
         })
     }
 
     if (`${dataHour}:${dataMinute}` === time[6] && new Date().getUTCDay() === 5) {
       client.channels.fetch(process.env.CHANNEL)
         .then(channel => {
-          channel.send(`@everyone ${db.friday[7]}`);
+          channel.send(`@everyone ${db.friday[7].name} ${db.friday[7].conf}`);
         })
     }
 
@@ -279,49 +279,49 @@ client.on('ready', () => {
     if (`${dataHour}:${dataMinute}` === time[0] && new Date().getUTCDay() === 6) {
       client.channels.fetch(process.env.CHANNEL)
         .then(channel => {
-          channel.send(`@everyone ${db.saturday[1]}`);
+          channel.send(`@everyone ${db.saturday[1].name} ${db.saturday[1].conf}`);
         })
     }
 
     if (`${dataHour}:${dataMinute}` === time[1] && new Date().getUTCDay() === 6) {
       client.channels.fetch(process.env.CHANNEL)
         .then(channel => {
-          channel.send(`@everyone ${db.saturday[2]}`);
+          channel.send(`@everyone ${db.saturday[2].name} ${db.saturday[2].conf}`);
         })
     }
 
     if (`${dataHour}:${dataMinute}` === time[2] && new Date().getUTCDay() === 6) {
       client.channels.fetch(process.env.CHANNEL)
         .then(channel => {
-          channel.send(`@everyone ${db.saturday[3]}`);
+          channel.send(`@everyone ${db.saturday[3].name} ${db.saturday[3].conf}`);
         })
     }
 
     if (`${dataHour}:${dataMinute}` === time[3] && new Date().getUTCDay() === 6) {
       client.channels.fetch(process.env.CHANNEL)
         .then(channel => {
-          channel.send(`@everyone ${db.saturday[4]}`);
+          channel.send(`@everyone ${db.saturday[4].name} ${db.saturday[4].conf}`);
         })
     }
 
     if (`${dataHour}:${dataMinute}` === time[4] && new Date().getUTCDay() === 6) {
       client.channels.fetch(process.env.CHANNEL)
         .then(channel => {
-          channel.send(`@everyone ${db.saturday[5]}`);
+          channel.send(`@everyone ${db.saturday[5].name} ${db.saturday[5].conf}`);
         })
     }
 
     if (`${dataHour}:${dataMinute}` === time[5] && new Date().getUTCDay() === 6) {
       client.channels.fetch(process.env.CHANNEL)
         .then(channel => {
-          channel.send(`@everyone ${db.saturday[6]}`);
+          channel.send(`@everyone ${db.saturday[6].name} ${db.saturday[6].conf}`);
         })
     }
 
     if (`${dataHour}:${dataMinute}` === time[6] && new Date().getUTCDay() === 6) {
       client.channels.fetch(process.env.CHANNEL)
         .then(channel => {
-          channel.send(`@everyone ${db.saturday[7]}`);
+          channel.send(`@everyone ${db.saturday[7].name} ${db.saturday[7].conf}`);
         })
     }
   }, 15000);
