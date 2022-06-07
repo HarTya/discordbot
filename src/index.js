@@ -323,7 +323,7 @@ client.on('ready', () => {
           channel.send(`@everyone ${db.saturday[7].name} ${db.saturday[7].conf}`);
         })
     }
-  }, 15000);
+  }, 60000);
 })
 
 client.on('messageCreate', message => {
