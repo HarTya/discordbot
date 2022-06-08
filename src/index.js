@@ -334,7 +334,7 @@ client.on('ready', () => {
 })
 
 client.on('messageCreate', message => {
-  if (message.content.toLocaleLowerCase().includes('бля') === true || message.content.toLocaleLowerCase().includes('сука') === true || message.content.toLocaleLowerCase().includes('пиздец') === true || message.content.toLocaleLowerCase().includes('нахуй') === true || message.content.toLocaleLowerCase().includes('пизда') === true || message.content.toLocaleLowerCase().includes('ебать') === true || message.content.toLocaleLowerCase().includes('хуй') === true || message.content.toLocaleLowerCase().includes('пиздец') === true || message.content.toLocaleLowerCase().includes('нахуй') === true || message.content.toLocaleLowerCase().includes('пизда') === true || message.content.toLocaleLowerCase().includes('ебать') === true || message.content.toLocaleLowerCase().includes('ахуеть') === true) {
+  if (message.content.toLocaleLowerCase().includes('бля') === true || message.content.toLocaleLowerCase().includes('сука') === true || message.content.toLocaleLowerCase().includes('пизд') === true || message.content.toLocaleLowerCase().includes('ебать') === true || message.content.toLocaleLowerCase().includes('хуй') === true || message.content.toLocaleLowerCase().includes('ахуеть') === true) {
     if (message.author.tag === 'Робот Долбоёб#9882') {
       return
     }
