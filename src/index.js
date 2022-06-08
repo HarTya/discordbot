@@ -358,7 +358,7 @@ client.on('messageCreate', message => {
     message.reply('я рамзан кадыров гон дон');
   }
 
-  if (message.content.toLocaleLowerCase().includes('https://') === true) {
+  if (message.content.toLocaleLowerCase().includes('https://tenor') === true) {
     if (message.author.tag === 'Робот Долбоёб#9882') {
       return
     }
