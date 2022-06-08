@@ -358,7 +358,7 @@ client.on('messageCreate', message => {
     message.reply('Неинтересная хуйня лучше зайди сюда https://github.com/HarTya');
   }
 
-  if (message.content.toLocaleLowerCase().includes('робот долбоёб') === true) {
+  if (message.content.includes('@Робот Долбоёб') === true) {
     if (message.author.tag === 'Робот Долбоёб#9882') {
       return
     }
