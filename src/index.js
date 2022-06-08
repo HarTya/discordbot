@@ -344,13 +344,6 @@ client.on('messageCreate', message => {
     message.reply(`Общайся без мата, ${message.author}, или выебу своим 50+ бит железным хуем`);
   }
 
-  if (message.content.toLocaleLowerCase().includes('артя') === true || message.content.toLocaleLowerCase().includes('artya') === true) {
-    if (message.author.tag === 'Робот Долбоёб#9882') {
-      return
-    }
-    message.reply('Фу такой хуёвый код пишет это пиздец а ой');
-  }
-
   if (message.content.toLocaleLowerCase().includes('дон') === true) {
     if (message.author.tag === 'Робот Долбоёб#9882') {
       return
@@ -365,25 +358,11 @@ client.on('messageCreate', message => {
     message.reply('Неинтересная хуйня лучше зайди сюда https://github.com/HarTya');
   }
 
-  if (message.content.toLocaleLowerCase().includes('я робот') === true) {
-    if (message.author.tag === 'Робот Долбоёб#9882') {
-      return
-    }
-    message.reply('Я должен танцевать');
-  }
-
-  if (message.content.toLocaleLowerCase().includes('@робот долбоёб') === true) {
+  if (message.content.toLocaleLowerCase().includes('робот долбоёб') === true) {
     if (message.author.tag === 'Робот Долбоёб#9882') {
       return
     }
     message.reply('шо');
-  }
-
-  if (message.content.toLocaleLowerCase().includes('bambino') === true) {
-    if (message.author.tag === 'Робот Долбоёб#9882') {
-      return
-    }
-    message.reply('I understand but пошел нахуй черномазый');
   }
 })
 
