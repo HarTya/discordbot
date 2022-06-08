@@ -327,7 +327,7 @@ client.on('ready', () => {
 })
 
 client.on('messageCreate', message => {
-  if (message.content.toLocaleLowerCase().includes('бля') === true || message.content.toLocaleLowerCase().includes('сука') === true || message.content.toLocaleLowerCase().includes('пиздец') === true || message.content.toLocaleLowerCase().includes('нахуй') === true || message.content.toLocaleLowerCase().includes('пизда') === true || message.content.toLocaleLowerCase().includes('уебан') === true || message.content.toLocaleLowerCase().includes('ебать') === true || message.content.toLocaleLowerCase().includes('хуй') === true) {
+  if (message.content.toLocaleLowerCase().includes('бля') === true || message.content.toLocaleLowerCase().includes('сука') === true || message.content.toLocaleLowerCase().includes('пиздец') === true || message.content.toLocaleLowerCase().includes('нахуй') === true || message.content.toLocaleLowerCase().includes('пизда') === true || message.content.toLocaleLowerCase().includes('ебать') === true || message.content.toLocaleLowerCase().includes('хуй') === true || message.content.toLocaleLowerCase().includes('пиздец') === true || message.content.toLocaleLowerCase().includes('нахуй') === true || message.content.toLocaleLowerCase().includes('пизда') === true || message.content.toLocaleLowerCase().includes('ебать') === true || message.content.toLocaleLowerCase().includes('ахуеть') === true) {
     if (message.author.tag === 'Робот Долбоёб#9882') {
       return
     }
@@ -342,6 +342,13 @@ client.on('messageCreate', message => {
       return
     }
     message.reply('Фу такой хуёвый код пишет это пиздец а ой');
+  }
+
+  if (message.content.toLocaleLowerCase().includes('дон') === true) {
+    if (message.author.tag === 'Робот Долбоёб#9882') {
+      return
+    }
+    message.reply('я рамзан кадыров гон дон');
   }
 
   if (message.content.toLocaleLowerCase().includes('https://') === true) {
