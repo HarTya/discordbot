@@ -164,7 +164,7 @@ client.on('ready', () => {
         })
     }
 
-    if (response.data.time === time[6] && response.data.dayOfWeek === 'Wednesday') {
+    if (response.data.time === time[7] && response.data.dayOfWeek === 'Wednesday') {
       client.channels.fetch(process.env.CHANNEL)
         .then(channel => {
           channel.send(`@everyone ${db.wednesday[8].name} ${db.wednesday[8].conf}`);
