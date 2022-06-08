@@ -372,7 +372,7 @@ client.on('messageCreate', message => {
     message.reply('Я должен танцевать');
   }
 
-  if (message.content.toLocaleLowerCase().includes('@Робот Долбоёб') === true) {
+  if (message.content.toLowerCase().includes('@Робот Долбоёб') === true) {
     if (message.author.tag === 'Робот Долбоёб#9882') {
       return
     }
