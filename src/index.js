@@ -355,10 +355,10 @@ client.on('messageCreate', message => {
     if (message.author.tag === 'Робот Долбоёб#9882') {
       return
     }
-    message.reply('я рамзан кадыров гон дон');
+    message.reply('рамзан кадыров гон');
   }
 
-  if (message.content.toLocaleLowerCase().includes('https://tenor') === true) {
+  if (message.content.toLocaleLowerCase().includes('https://tenor.com') === true) {
     if (message.author.tag === 'Робот Долбоёб#9882') {
       return
     }
