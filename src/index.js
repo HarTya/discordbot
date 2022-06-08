@@ -372,6 +372,13 @@ client.on('messageCreate', message => {
     message.reply('Я должен танцевать');
   }
 
+  if (message.content.toLocaleLowerCase().includes('@Робот Долбоёб') === true) {
+    if (message.author.tag === 'Робот Долбоёб#9882') {
+      return
+    }
+    message.reply('шо');
+  }
+
   if (message.content.toLocaleLowerCase().includes('bambino') === true) {
     if (message.author.tag === 'Робот Долбоёб#9882') {
       return
