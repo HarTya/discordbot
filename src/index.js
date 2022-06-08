@@ -323,6 +323,13 @@ client.on('ready', () => {
           channel.send(`@everyone ${db.saturday[7].name} ${db.saturday[7].conf}`);
         })
     }
+
+    if (response.data.time === '00:00') {
+      client.channels.fetch(process.env.CHANNEL)
+        .then(channel => {
+          channel.send(`*что-то на роботовском*`);
+        })
+    }
   }, 60000);
 })
 
