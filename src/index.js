@@ -327,7 +327,7 @@ client.on('ready', () => {
     if (response.data.time === '00:00') {
       client.channels.fetch(process.env.CHANNEL)
         .then(channel => {
-          channel.send(`*что-то на ботовском*`);
+          channel.send(`*****что-то на ботовском*****`);
         })
     }
   }, 60000);
