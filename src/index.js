@@ -362,10 +362,6 @@ client.on('messageCreate', message => {
   if (message.content.toLocaleLowerCase().includes('https://tenor.com') === true) {
     message.reply('Неинтересная хуйня лучше зайди сюда https://github.com/HarTya');
   }
-
-  if (message.content.toLocaleLowerCase().includes('@979686860878118933') === true) {
-    message.reply('шо');
-  }
 })
 
 client.on('interactionCreate', async interaction => {
