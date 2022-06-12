@@ -340,6 +340,18 @@ let conversation = [];
 client.on('messageCreate', message => {
   if (message.author.bot) return;
 
+  if (message.mentions.has(client.user.id)) {
+    let text = message.content;
+    text = text.substring(text.indexOf('>') + 2, text.length);
+    console.log(text);
+
+    cb(text, conversation).then(res => {
+      conversation.push(text);
+      conversation.push(res);
+      message.channel.send(res);
+    });
+  }
+
   if (message.content.toLocaleLowerCase().includes('бля') === true || message.content.toLocaleLowerCase().includes('сука') === true || message.content.toLocaleLowerCase().includes('пизд') === true || message.content.toLocaleLowerCase().includes('ебать') === true || message.content.toLocaleLowerCase().includes('хуй') === true || message.content.toLocaleLowerCase().includes('ахуеть') === true) {
     if (message.author.tag === 'XarTya#9355') {
       return message.reply(`Тебе можно, пупсик`);
