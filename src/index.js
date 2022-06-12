@@ -60,6 +60,7 @@ client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
 
   setInterval(async () => {
+    clearInterval()
     const response = await axios.get('https://timeapi.io/api/Time/current/zone?timeZone=Europe/Kiev');
 
     console.log(response.data.time);
@@ -343,24 +344,12 @@ client.on('messageCreate', message => {
   if (message.mentions.has(client.user.id)) {
     let text = message.content;
     text = text.substring(text.indexOf('>') + 2, text.length);
-    console.log(text);
 
     cb(text, conversation).then(res => {
       conversation.push(text);
       conversation.push(res);
       message.channel.send(res);
     });
-  }
-
-  if (message.content.toLocaleLowerCase().includes('бля') === true || message.content.toLocaleLowerCase().includes('сука') === true || message.content.toLocaleLowerCase().includes('пизд') === true || message.content.toLocaleLowerCase().includes('ебать') === true || message.content.toLocaleLowerCase().includes('хуй') === true || message.content.toLocaleLowerCase().includes('ахуеть') === true) {
-    if (message.author.tag === 'XarTya#9355') {
-      return message.reply(`Тебе можно, пупсик`);
-    }
-    message.reply(`Общайся без мата, ${message.author}, или выебу своим 50+ бит железным хуем`);
-  }
-
-  if (message.content.toLocaleLowerCase().includes('https://tenor.com') === true) {
-    message.reply('Неинтересная хуйня лучше зайди сюда https://github.com/HarTya');
   }
 })
 
