@@ -1,4 +1,3 @@
-process.exit(1);
 require('dotenv').config();
 
 const { REST } = require('@discordjs/rest');
@@ -41,6 +40,8 @@ const client = new Discord.Client({
     Discord.Intents.FLAGS.GUILD_MESSAGES
   ]
 })
+
+const cb = require('cleverbot-free');
 
 const db = require('./lessons.json');
 const stringDb = `
@@ -334,35 +335,23 @@ client.on('ready', () => {
   }, 60000);
 })
 
+let conversation = [];
+
 client.on('messageCreate', message => {
+  if (message.author.bot) return;
+
   if (message.content.toLocaleLowerCase().includes('бля') === true || message.content.toLocaleLowerCase().includes('сука') === true || message.content.toLocaleLowerCase().includes('пизд') === true || message.content.toLocaleLowerCase().includes('ебать') === true || message.content.toLocaleLowerCase().includes('хуй') === true || message.content.toLocaleLowerCase().includes('ахуеть') === true) {
-    if (message.author.tag === 'Робот Долбоёб#9882') {
-      return
-    }
     if (message.author.tag === 'XarTya#9355') {
       return message.reply(`Тебе можно, пупсик`);
     }
     message.reply(`Общайся без мата, ${message.author}, или выебу своим 50+ бит железным хуем`);
   }
 
-  if (message.content.toLocaleLowerCase().includes('дон') === true) {
-    if (message.author.tag === 'Робот Долбоёб#9882') {
-      return
-    }
-    message.reply('рамзан кадыров гон');
-  }
-
   if (message.content.toLocaleLowerCase().includes('https://tenor.com') === true) {
-    if (message.author.tag === 'Робот Долбоёб#9882') {
-      return
-    }
     message.reply('Неинтересная хуйня лучше зайди сюда https://github.com/HarTya');
   }
 
   if (message.content.toLocaleLowerCase().includes('@979686860878118933') === true) {
-    if (message.author.tag === 'Робот Долбоёб#9882') {
-      return
-    }
     message.reply('шо');
   }
 })
